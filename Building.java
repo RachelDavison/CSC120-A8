@@ -1,4 +1,4 @@
-public class Building {
+public class Building implements BuildingRequirements{
 
     protected String name;
     protected String address;
