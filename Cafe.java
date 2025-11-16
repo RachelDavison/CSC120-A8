@@ -21,6 +21,24 @@ public class Cafe extends Building implements CafeRequirements{
     }
 
     /**
+     * Constructor for Cafe class with inventory parameters
+     * @param name
+     * @param address
+     * @param nFloors
+     * @param nCoffeeOunces
+     * @param nSugarPackets
+     * @param nCreams
+     * @param nCups
+     */
+    public Cafe(String name, String address, int nFloors, int nCoffeeOunces, int nSugarPackets, int nCreams, int nCups) {
+        super(name, address, nFloors);
+        this.nCoffeeOunces = nCoffeeOunces;
+        this.nSugarPackets = nSugarPackets;
+        this.nCreams = nCreams;
+        this.nCups = nCups;
+    }
+
+    /**
      * Overloaded constructor for Cafe class with default 1 floor
      * @param name
      * @param address
