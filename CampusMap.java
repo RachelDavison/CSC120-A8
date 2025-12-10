@@ -32,6 +32,10 @@ public class CampusMap {
         return b;
     }
 
+    /**
+     * To String method
+     * @return a list of all the buildings
+     */
     public String toString() {
         String mapString = "DIRECTORY of BUILDINGS";
 
@@ -87,8 +91,8 @@ public class CampusMap {
             selectedBuilding.showOptions();
             System.out.println("WARNING: Be sure to input the method exactly as shown, including parentheses. If you do not, the action will not be recognized.");
             System.out.println("WARNING: You have just entered this building. If you wish to enter again, you must exit first.");
-            String thisBuilding = "y";
-            while (thisBuilding.equals("y")){
+            String stayHere = "y";
+            while (stayHere.equals("y")){
                 // Prompt user to choose an action within the building, and continue looping until they ask to leave the building
                 System.out.println("What would you like to do? ");
                 String action = scanner.next();
@@ -249,13 +253,13 @@ public class CampusMap {
                     System.out.println("Invalid action. Please try again.");
                 }
                 System.out.println("Would you like to do anything else in " + selectedBuilding.getName() + "? (y/n)");
-                thisBuilding = scanner.next();
-                while (!thisBuilding.equals("y") && !thisBuilding.equals("n")) {
+                stayHere = scanner.next();
+                while (!stayHere.equals("y") && !stayHere.equals("n")) {
                     // Input validation for continuing in the building
                     System.out.println("That is not a valid input. Please enter 'y' or 'n'.");
-                    thisBuilding = scanner.next();
+                    stayHere = scanner.next();
                 }
-                if (thisBuilding.equals("y")){
+                if (stayHere.equals("y")){
                     System.out.println("Here are the available options in " + selectedBuilding.getName() + ":");
                     selectedBuilding.showOptions();
                 }
